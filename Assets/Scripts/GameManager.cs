@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -25,13 +24,17 @@ public class GameManager : MonoBehaviour
     
     [Header("Popup UI Elements")] 
     [SerializeField] private GameObject popupObject;
+    [SerializeField] private TMP_Text popupTitleText;
     [SerializeField] private TMP_Text popupScoreText;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button exitButton;
+    [SerializeField] private TMP_Text highScoreText;
     
     [Header("Settings")] 
     [SerializeField] private float timerBarDuration = 1f;
     [SerializeField] private string menuSceneName;
+    
+    private int playerScore;
 
     private void Start()
     {
@@ -52,17 +55,21 @@ public class GameManager : MonoBehaviour
     private void ResetUI()
     {
         computerStatusText.text = "Waiting for You";
-        timerBarImage.sizeDelta = new Vector2(Screen.width, timerBarImage.sizeDelta.y);
         youWonTMP.gameObject.SetActive(false);
         youWonTMP.text = "You Win!";
         scoreTMP.gameObject.SetActive(false);
         popupObject.SetActive(false);
         
-        StartCoroutine(LerpManager.Lerp(timerBarImage, Screen.width, 0f, timerBarDuration, LerpManager.LerpType.Linear));
+        timerBarImage.localScale = new Vector3(1, 1, 1);
+        
+        StartCoroutine(LerpManager.Lerp(timerBarImage, 1, 0f, timerBarDuration, LerpManager.LerpType.Linear));
     }
     
     public void PlayGame(int playerChoice)
     {
+        StopAllCoroutines();
+        timerBarImage.localScale = new Vector3(0, 1, 1);
+        
         var computerChoice = Random.Range(0, 5);
 
         computerStatusText.text = computerChoice switch
@@ -96,8 +103,6 @@ public class GameManager : MonoBehaviour
         {
             PlayerLoses();
         }
-        
-        timerBarImage.sizeDelta = new Vector2(Screen.width, timerBarImage.sizeDelta.y);
     }
     
     private void PlayerTies()
@@ -112,21 +117,26 @@ public class GameManager : MonoBehaviour
     
     private void PlayerWins()
     {
+        playerScore++;
+        
         youWonTMP.gameObject.SetActive(true);
         youWonTMP.text = "You Win!";
         scoreTMP.gameObject.SetActive(true);
+        scoreTMP.text = playerScore.ToString();
         
-        var currentScore = PlayerPrefs.GetInt("HighScore", 0);
-        PlayerPrefs.SetInt("HighScore", currentScore + 1);
-        scoreTMP.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        var currentHighScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (currentHighScore < playerScore)
+        {
+            PlayerPrefs.SetInt("HighScore", playerScore);
+        }
         
         StartCoroutine(WaitAndReset());
     }
     
     private void PlayerLoses()
     {
-        popupObject.SetActive(true);
-        popupScoreText.text = $"Score: {PlayerPrefs.GetInt("HighScore", 0).ToString()}";
+        popupTitleText.text = "You Lost!";
+        ShowLostPopup();
     }
     
     private void ExitGame()
@@ -136,14 +146,21 @@ public class GameManager : MonoBehaviour
     
     private void OnLerpComplete()
     {
-        popupObject.SetActive(true);
-        popupScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        popupTitleText.text = "Timer ran out!";
+        ShowLostPopup();
     }
     
     private IEnumerator WaitAndReset()
     {
         yield return new WaitForSeconds(2f);
         ResetUI();
+    }
+    
+    private void ShowLostPopup()
+    {
+        popupObject.SetActive(true);
+        popupScoreText.text = "Score: " + playerScore;
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0);
     }
 
     private void OnDestroy()

@@ -27,12 +27,12 @@ public static class LerpManager
             currentLerpTime += Time.deltaTime;
             t = currentLerpTime / lerpTime;
             t = LerpStyleFinder(lerpType, t);
-            target.sizeDelta = new Vector2(Mathf.Lerp(start, end, t), target.sizeDelta.y);
+            target.localScale = new Vector2(Mathf.Lerp(start, end, t), 1);
 
             yield return new WaitForEndOfFrame();
         }
 
-        target.sizeDelta = new Vector2(end, target.sizeDelta.y);
+        target.localScale = new Vector2(end, 1);
 
         OnComplete?.Invoke();
     }
