@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     [Header("Settings")] 
     [SerializeField] private float timerBarDuration = 1f;
     [SerializeField] private string menuSceneName;
+    [SerializeField] private Sprite rock2Sprite;
+    [SerializeField] private Image rockImage;
 
     private int playerScore;
 
@@ -50,6 +52,12 @@ public class GameManager : MonoBehaviour
         exitButton.onClick.AddListener(ExitGame);
 
         LerpManager.OnComplete += OnLerpComplete;
+        
+        // Just for fun
+        if (PlayerPrefs.GetInt("HighScore", 0) > 0)
+        {
+            rockImage.sprite = rock2Sprite;
+        }
     }
 
     private void ResetUI()
