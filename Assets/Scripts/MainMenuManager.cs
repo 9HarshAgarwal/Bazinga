@@ -29,6 +29,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void PlayInstructions()
     {
+        Application.OpenURL("https://www.youtube.com/watch?v=pIpmITBocfM");
     }
     
     private void ExitGame()

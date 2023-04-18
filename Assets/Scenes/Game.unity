@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 23259037}
   - component: {fileID: 23259039}
   - component: {fileID: 23259038}
+  - component: {fileID: 23259040}
   m_Layer: 5
   m_Name: Paper Image
   m_TagString: Untagged
@@ -267,6 +268,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23259036}
   m_CullTransparentMesh: 1
+--- !u!114 &23259040
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23259036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &31790363
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +369,7 @@ GameObject:
   - component: {fileID: 34629330}
   - component: {fileID: 34629332}
   - component: {fileID: 34629331}
+  - component: {fileID: 34629333}
   m_Layer: 5
   m_Name: Scissors Background Image
   m_TagString: Untagged
@@ -422,6 +436,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34629329}
   m_CullTransparentMesh: 1
+--- !u!114 &34629333
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34629329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114787152
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +460,7 @@ GameObject:
   - component: {fileID: 114787157}
   - component: {fileID: 114787156}
   - component: {fileID: 114787155}
-  - component: {fileID: 114787154}
+  - component: {fileID: 114787158}
   m_Layer: 5
   m_Name: Rock Button
   m_TagString: Untagged
@@ -463,19 +489,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &114787154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114787152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!114 &114787155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +571,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114787152}
   m_CullTransparentMesh: 1
+--- !u!114 &114787158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114787152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bac33ade27cf4542bd53b1b13d90941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: 0
+  _separateMask: {fileID: 0}
+  _sprite: {fileID: 0}
+  _spriteBorderMode: 0
+  _spritePixelsPerUnitMultiplier: 1
+  _texture: {fileID: 0}
+  _textureUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  _channelWeights: {r: 0, g: 0, b: 0, a: 1}
+  _raycastThreshold: 0
+  _invertMask: 0
+  _invertOutsides: 0
 --- !u!1 &138129058
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,7 +949,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f52a94dde5282488c608c5ce995f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeAreaTransform: {fileID: 268626246}
+  ConformX: 1
+  ConformY: 1
+  Logging: 0
 --- !u!1 &268805870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1634,7 @@ GameObject:
   - component: {fileID: 645438713}
   - component: {fileID: 645438715}
   - component: {fileID: 645438714}
+  - component: {fileID: 645438716}
   m_Layer: 5
   m_Name: Rock Image
   m_TagString: Untagged
@@ -1656,6 +1700,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645438712}
   m_CullTransparentMesh: 1
+--- !u!114 &645438716
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645438712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648028519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +1858,7 @@ GameObject:
   - component: {fileID: 740879032}
   - component: {fileID: 740879034}
   - component: {fileID: 740879033}
+  - component: {fileID: 740879035}
   m_Layer: 5
   m_Name: Paper Background Image
   m_TagString: Untagged
@@ -1868,6 +1925,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740879031}
   m_CullTransparentMesh: 1
+--- !u!114 &740879035
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740879031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &816144198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2083,7 @@ GameObject:
   - component: {fileID: 849301712}
   - component: {fileID: 849301714}
   - component: {fileID: 849301713}
+  - component: {fileID: 849301715}
   m_Layer: 5
   m_Name: Lizard Background Image
   m_TagString: Untagged
@@ -2080,6 +2150,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849301711}
   m_CullTransparentMesh: 1
+--- !u!114 &849301715
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849301711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861555983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,7 +2536,7 @@ GameObject:
   - component: {fileID: 1040548120}
   - component: {fileID: 1040548119}
   - component: {fileID: 1040548118}
-  - component: {fileID: 1040548117}
+  - component: {fileID: 1040548121}
   m_Layer: 5
   m_Name: Spock Button
   m_TagString: Untagged
@@ -2483,19 +2565,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1040548117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040548115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!114 &1040548118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,6 +2647,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040548115}
   m_CullTransparentMesh: 1
+--- !u!114 &1040548121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040548115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bac33ade27cf4542bd53b1b13d90941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: 0
+  _separateMask: {fileID: 0}
+  _sprite: {fileID: 0}
+  _spriteBorderMode: 0
+  _spritePixelsPerUnitMultiplier: 1
+  _texture: {fileID: 0}
+  _textureUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  _channelWeights: {r: 0, g: 0, b: 0, a: 1}
+  _raycastThreshold: 0
+  _invertMask: 0
+  _invertOutsides: 0
 --- !u!1 &1065962430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,6 +2821,7 @@ GameObject:
   - component: {fileID: 1079292110}
   - component: {fileID: 1079292112}
   - component: {fileID: 1079292111}
+  - component: {fileID: 1079292113}
   m_Layer: 5
   m_Name: Scissors Image
   m_TagString: Untagged
@@ -2789,6 +2887,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079292109}
   m_CullTransparentMesh: 1
+--- !u!114 &1079292113
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079292109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109440463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,6 +2910,7 @@ GameObject:
   - component: {fileID: 1109440464}
   - component: {fileID: 1109440466}
   - component: {fileID: 1109440465}
+  - component: {fileID: 1109440467}
   m_Layer: 5
   m_Name: Spock Background Image
   m_TagString: Untagged
@@ -2866,6 +2977,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109440463}
   m_CullTransparentMesh: 1
+--- !u!114 &1109440467
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109440463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1181550094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,6 +3000,7 @@ GameObject:
   - component: {fileID: 1181550095}
   - component: {fileID: 1181550097}
   - component: {fileID: 1181550096}
+  - component: {fileID: 1181550098}
   m_Layer: 5
   m_Name: Rock Background Image
   m_TagString: Untagged
@@ -2943,6 +3067,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181550094}
   m_CullTransparentMesh: 1
+--- !u!114 &1181550098
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181550094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196087000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,7 +3091,7 @@ GameObject:
   - component: {fileID: 1196087005}
   - component: {fileID: 1196087004}
   - component: {fileID: 1196087003}
-  - component: {fileID: 1196087002}
+  - component: {fileID: 1196087006}
   m_Layer: 5
   m_Name: Paper Button
   m_TagString: Untagged
@@ -2984,19 +3120,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1196087002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196087000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!114 &1196087003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,6 +3202,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196087000}
   m_CullTransparentMesh: 1
+--- !u!114 &1196087006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196087000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bac33ade27cf4542bd53b1b13d90941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: 0
+  _separateMask: {fileID: 0}
+  _sprite: {fileID: 0}
+  _spriteBorderMode: 0
+  _spritePixelsPerUnitMultiplier: 1
+  _texture: {fileID: 0}
+  _textureUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  _channelWeights: {r: 0, g: 0, b: 0, a: 1}
+  _raycastThreshold: 0
+  _invertMask: 0
+  _invertOutsides: 0
 --- !u!1 &1204643734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,7 +3303,7 @@ GameObject:
   - component: {fileID: 1245792121}
   - component: {fileID: 1245792120}
   - component: {fileID: 1245792119}
-  - component: {fileID: 1245792118}
+  - component: {fileID: 1245792122}
   m_Layer: 5
   m_Name: Scissors Button
   m_TagString: Untagged
@@ -3181,19 +3332,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1245792118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245792116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!114 &1245792119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3276,6 +3414,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245792116}
   m_CullTransparentMesh: 1
+--- !u!114 &1245792122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245792116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bac33ade27cf4542bd53b1b13d90941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: 0
+  _separateMask: {fileID: 0}
+  _sprite: {fileID: 0}
+  _spriteBorderMode: 0
+  _spritePixelsPerUnitMultiplier: 1
+  _texture: {fileID: 0}
+  _textureUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  _channelWeights: {r: 0, g: 0, b: 0, a: 1}
+  _raycastThreshold: 0
+  _invertMask: 0
+  _invertOutsides: 0
 --- !u!1 &1390378996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,7 +3530,7 @@ GameObject:
   - component: {fileID: 1473657653}
   - component: {fileID: 1473657652}
   - component: {fileID: 1473657651}
-  - component: {fileID: 1473657650}
+  - component: {fileID: 1473657654}
   m_Layer: 5
   m_Name: Lizard Button
   m_TagString: Untagged
@@ -3393,19 +3559,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1473657650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473657648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!114 &1473657651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3488,6 +3641,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473657648}
   m_CullTransparentMesh: 1
+--- !u!114 &1473657654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473657648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bac33ade27cf4542bd53b1b13d90941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: 0
+  _separateMask: {fileID: 0}
+  _sprite: {fileID: 0}
+  _spriteBorderMode: 0
+  _spritePixelsPerUnitMultiplier: 1
+  _texture: {fileID: 0}
+  _textureUVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  _channelWeights: {r: 0, g: 0, b: 0, a: 1}
+  _raycastThreshold: 0
+  _invertMask: 0
+  _invertOutsides: 0
 --- !u!1 &1571925419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,6 +3836,7 @@ GameObject:
   - component: {fileID: 1586592358}
   - component: {fileID: 1586592360}
   - component: {fileID: 1586592359}
+  - component: {fileID: 1586592361}
   m_Layer: 5
   m_Name: Lizard Image
   m_TagString: Untagged
@@ -3720,6 +3902,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586592357}
   m_CullTransparentMesh: 1
+--- !u!114 &1586592361
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586592357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1618223203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,6 +4203,7 @@ GameObject:
   - component: {fileID: 1854482079}
   - component: {fileID: 1854482081}
   - component: {fileID: 1854482080}
+  - component: {fileID: 1854482082}
   m_Layer: 5
   m_Name: Spock Image
   m_TagString: Untagged
@@ -4074,6 +4269,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854482078}
   m_CullTransparentMesh: 1
+--- !u!114 &1854482082
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854482078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddc1fbd4bd796345832996a9560b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1893164872
 GameObject:
   m_ObjectHideFlags: 0
