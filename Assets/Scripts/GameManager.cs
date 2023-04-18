@@ -100,43 +100,43 @@ public class GameManager : MonoBehaviour
             switch (playerChoice, computerChoice)
             {
                 case (0, 2):
-                    popupTitleTMP.text = "Rock crushes Scissors";
+                    gameResultTMP.text = "Rock crushes Scissors";
                     PlayerWins();
                     break;
                 case (0, 3):
-                    popupTitleTMP.text = "Rock crushes Lizard";
+                    gameResultTMP.text = "Rock crushes Lizard";
                     PlayerWins();
                     break;
                 case (1, 0):
-                    popupTitleTMP.text = "Paper covers Rock";
+                    gameResultTMP.text = "Paper covers Rock";
                     PlayerWins();
                     break;
                 case (1, 4):
-                    popupTitleTMP.text = "Paper disproves Spock";
+                    gameResultTMP.text = "Paper disproves Spock";
                     PlayerWins();
                     break;
                 case (2, 1):
-                    popupTitleTMP.text = "Scissors cuts Paper";
+                    gameResultTMP.text = "Scissors cuts Paper";
                     PlayerWins();
                     break;
                 case (2, 3):
-                    popupTitleTMP.text = "Scissors decapitates Lizard";
+                    gameResultTMP.text = "Scissors decapitates Lizard";
                     PlayerWins();
                     break;
                 case (3, 1):
-                    popupTitleTMP.text = "Lizard eats Paper";
+                    gameResultTMP.text = "Lizard eats Paper";
                     PlayerWins();
                     break;
                 case (3, 4):
-                    popupTitleTMP.text = "Lizard poisons Spock";
+                    gameResultTMP.text = "Lizard poisons Spock";
                     PlayerWins();
                     break;
                 case (4, 0):
-                    popupTitleTMP.text = "Spock vaporizes Rock";
+                    gameResultTMP.text = "Spock vaporizes Rock";
                     PlayerWins();
                     break;
                 case (4, 2):
-                    popupTitleTMP.text = "Spock smashes Scissors";
+                    gameResultTMP.text = "Spock smashes Scissors";
                     PlayerWins();
                     break;
                 default:
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
         gameResultTMP.gameObject.SetActive(true);
         gameResultTMP.text = "Tie!";
         scoreTMP.gameObject.SetActive(true);
-        scoreTMP.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        scoreTMP.text = playerScore.ToString();
 
         StartCoroutine(WaitAndReset());
     }
@@ -163,7 +163,6 @@ public class GameManager : MonoBehaviour
         playerScore++;
 
         gameResultTMP.gameObject.SetActive(true);
-        gameResultTMP.text = "You Win!";
         scoreTMP.gameObject.SetActive(true);
         scoreTMP.text = playerScore.ToString();
 
