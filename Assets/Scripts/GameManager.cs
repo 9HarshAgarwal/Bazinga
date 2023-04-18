@@ -103,45 +103,85 @@ public class GameManager : MonoBehaviour
                     gameResultTMP.text = "Rock crushes Scissors";
                     PlayerWins();
                     break;
+                case (2, 0):
+                    popupTitleTMP.text = "Rock crushes Scissors";
+                    PlayerLoses();
+                    break;
                 case (0, 3):
                     gameResultTMP.text = "Rock crushes Lizard";
                     PlayerWins();
+                    break;
+                case (3, 0):
+                    popupTitleTMP.text = "Rock crushes Lizard";
+                    PlayerLoses();
                     break;
                 case (1, 0):
                     gameResultTMP.text = "Paper covers Rock";
                     PlayerWins();
                     break;
+                case (0, 1):
+                    popupTitleTMP.text = "Paper covers Rock";
+                    PlayerLoses();
+                    break;
                 case (1, 4):
                     gameResultTMP.text = "Paper disproves Spock";
                     PlayerWins();
+                    break;
+                case (4, 1):
+                    popupTitleTMP.text = "Paper disproves Spock";
+                    PlayerLoses();
                     break;
                 case (2, 1):
                     gameResultTMP.text = "Scissors cuts Paper";
                     PlayerWins();
                     break;
+                case (1, 2):
+                    popupTitleTMP.text = "Scissors cuts Paper";
+                    PlayerLoses();
+                    break;
                 case (2, 3):
                     gameResultTMP.text = "Scissors decapitates Lizard";
                     PlayerWins();
+                    break;
+                case (3, 2):
+                    popupTitleTMP.text = "Scissors decapitates Lizard";
+                    PlayerLoses();
                     break;
                 case (3, 1):
                     gameResultTMP.text = "Lizard eats Paper";
                     PlayerWins();
                     break;
+                case (1, 3):
+                    popupTitleTMP.text = "Lizard eats Paper";
+                    PlayerLoses();
+                    break;
                 case (3, 4):
                     gameResultTMP.text = "Lizard poisons Spock";
                     PlayerWins();
+                    break;
+                case (4, 3):
+                    popupTitleTMP.text = "Lizard poisons Spock";
+                    PlayerLoses();
                     break;
                 case (4, 0):
                     gameResultTMP.text = "Spock vaporizes Rock";
                     PlayerWins();
                     break;
+                case (0, 4):
+                    popupTitleTMP.text = "Spock vaporizes Rock";
+                    PlayerLoses();
+                    break;
                 case (4, 2):
                     gameResultTMP.text = "Spock smashes Scissors";
                     PlayerWins();
                     break;
-                default:
-                    popupTitleTMP.text = "Player loses";
+                case (2, 4):
+                    popupTitleTMP.text = "Spock smashes Scissors";
                     PlayerLoses();
+                    break;
+                default:
+                    Debug.LogError("Bazinga! You shouldn't be here.");
+                    ResetUI();
                     break;
             }
         }
@@ -177,7 +217,6 @@ public class GameManager : MonoBehaviour
 
     private void PlayerLoses()
     {
-        popupTitleTMP.text = "You Lost!";
         ShowLostPopup();
     }
 
